@@ -65,7 +65,7 @@ pip install -U cookiecutter
 然后转到你想创建项目的目录并运行：
 
 ```bash
-cookiecutter gh:andeya/py-layout --checkout v1.0.0
+cookiecutter gh:andeya/py-layout --checkout v1.0.1
 ```
 
 ### 输入变量

@@ -1,0 +1,47 @@
+{
+  "project_name": "python-project",
+  "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('-', '_') }}",
+  "project_description": "Awesome `{{ cookiecutter.package_name }}` is a Python cli/package created with https://github.com/andeya/py-layout",
+  "organization": "{{ cookiecutter.package_name }}",
+  "license": [
+    "MIT",
+    "BSD-3",
+    "GNU GPL v3.0",
+    "Apache Software License 2.0"
+  ],
+  "_all_python_minor_version": [
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "minimal_python_version": [
+    3.8,
+    3.9,
+    3.10,
+    3.11,
+    3.12
+  ],
+  "github_name": "{{ cookiecutter.organization.lower().replace(' ', '_').replace('-', '_') }}",
+  "email": "{{ cookiecutter.github_name }}@{{ cookiecutter.organization.lower().replace(' ', '-') }}.com",
+  "version": "0.1.0",
+  "line_length": 88,
+  "using_tsinghua_image_source": false,
+  "install_ruff": true,
+  "install_pre_commit": true,
+  "install_coverage": true,
+  "install_darglint": false,
+  "install_safety": false,
+  "project_mode": [
+    "bin",
+    "lib"
+  ],
+  "_copy_without_render": [
+    "poetry.lock",
+    "docs/changelog.md",
+    "docs/contributing.md",
+    "docs/index.md",
+    ".github/workflows/*.yml"
+  ]
+}

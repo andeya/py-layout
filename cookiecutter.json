@@ -41,7 +41,6 @@
     "poetry.lock",
     "docs/changelog.md",
     "docs/contributing.md",
-    "docs/index.md",
-    ".github/workflows/*.yml"
+    "docs/index.md"
   ]
 }

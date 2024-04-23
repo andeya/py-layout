@@ -80,41 +80,41 @@ coverage-badge = "^1.1.0"
 {% if cookiecutter.install_darglint %}darglint = "^1.8.1"{% endif %}
 
 [tool.ruff]
-# https://beta.ruff.rs/docs/settings/
-# https://docs.astral.sh/ruff/configuration/
+# https://docs.astral.sh/ruff/settings
 line-length = 88
-
-# https://beta.ruff.rs/docs/rules/
-select = ["E", "W", "F", "I"]
-extend-select = ["I"]
-ignore = ["F401"]
 
 # Exclude a variety of commonly ignored directories.
 respect-gitignore = true
-ignore-init-module-imports = true
 exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".git-rewrite",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "venv",
 ]
+
+[tool.ruff.lint]
+# https://beta.ruff.rs/docs/rules/
+ignore-init-module-imports = true
+select = ["E", "W", "F", "I"]
+extend-select = ["I"]
+ignore = ["F401"]
 
 [tool.ruff.format]
 # Like Black, use double quotes for strings.

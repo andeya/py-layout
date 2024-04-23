@@ -15,13 +15,14 @@ endif
 IMAGE := {{ cookiecutter.package_name }}
 VERSION := latest
 
-.PHONY: lock install {% if cookiecutter.install_pre_commit %}pre-commit-install{% endif %} polish-codestyle formatting test check-codestyle lint doc-build doc-serve docker-build docker-remove cleanup help
+.PHONY: lock install {% if cookiecutter.install_pre_commit %}pre-commit-install pre-commit-uninstall{% endif %} polish-codestyle formatting test check-codestyle lint doc-build doc-serve docker-build docker-remove cleanup help
 
 help:
 	@echo "lock                                      Lock the dependencies."
 	@echo "install                                   Install the project dependencies."
 {%- if cookiecutter.install_pre_commit %}
 	@echo "pre-commit-install                        Install the pre-commit hooks."
+	@echo "pre-commit-uninstall                      Uninstall the pre-commit hooks."
 {%- endif %}
 	@echo "polish-codestyle                          Format the codebase."
 	@echo "formatting                                Format the codebase."
@@ -45,6 +46,8 @@ install: lock
 {%- if cookiecutter.install_pre_commit %}
 pre-commit-install:
 	poetry run pre-commit install
+pre-commit-uninstall:
+	poetry run pre-commit uninstall
 {%- endif %}
 
 polish-codestyle:

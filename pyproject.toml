@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "py-layout"
-version = "1.0.3"
+version = "1.0.4"
 description = "Cookiecutter template for Python project"
 readme = "README.md"
 authors = ["Andeya <andeyalee@outlook.com>"]
@@ -113,7 +113,7 @@ color_output = true
 
 [tool.mypy]
 # https://mypy.readthedocs.io/en/latest/config_file.html#using-a-pyproject-toml-file
-python_version = 3.7
+python_version = "3.7"
 pretty = true
 show_traceback = true
 color_output = true
@@ -170,13 +170,11 @@ addopts = [
 
 [tool.coverage.run]
 source = ["tests"]
-
-[coverage.paths]
-source = "hooks"
-
-[coverage.run]
 branch = true
 
-[coverage.report]
+[tool.coverage.paths]
+source = ["hooks"]
+
+[tool.coverage.report]
 fail_under = 50
 show_missing = true

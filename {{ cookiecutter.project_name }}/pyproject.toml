@@ -144,16 +144,15 @@ addopts = [
 ]
 
 {% if cookiecutter.install_coverage -%}
+# https://coverage.readthedocs.io/en/latest/config.html
 [tool.coverage.run]
 source = ["tests"]
-
-[coverage.paths]
-source = "{{ cookiecutter.package_name }}"
-
-[coverage.run]
 branch = true
 
-[coverage.report]
+[tool.coverage.paths]
+source = ["{{ cookiecutter.package_name }}"]
+
+[tool.coverage.report]
 fail_under = 50
 show_missing = true
 {%- endif %}

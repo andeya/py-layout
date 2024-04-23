@@ -26,7 +26,7 @@
 
 ### 开发特性
 
-- 支持 `Python 3.7` 及更高版本。
+- 支持 `Python 3.8` 及更高版本。
 - 使用 [`Poetry`](https://python-poetry.org/) 作为依赖管理器。参见 [`pyproject.toml`](https://github.com/andeya/py-layout/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/pyproject.toml) 和 [`setup.cfg`](https://github.com/andeya/py-layout/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/setup.cfg) 中的配置。
 - 更快的格式化工具，使用 [`ruff`](https://github.com/astral-sh/ruff) 自动代码风格，替代 [`black`](https://github.com/psf/black)、[`isort`](https://github.com/timothycrosley/isort) 和 [`pyupgrade`](https://github.com/asottile/pyupgrade)。
 - 已准备好使用的 [`pre-commit`](https://pre-commit.com/) 钩子，用于代码格式化。
@@ -333,4 +333,3 @@ make cleanup
 - [开源财务支持便捷指南](https://github.com/nayafia/lemonade-stand)
 - [GitHub Actions 文档](https://help.github.com/en/actions).
 - 也许你想添加 [gitmoji](https://gitmoji.carloscuesta.me/) 来提交名称。 这真的很有趣。😄
-

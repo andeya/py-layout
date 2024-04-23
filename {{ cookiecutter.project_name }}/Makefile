@@ -42,6 +42,7 @@ lock:
 
 install: lock
 	poetry install -n
+	make formatting
 
 {%- if cookiecutter.install_pre_commit %}
 pre-commit-install:

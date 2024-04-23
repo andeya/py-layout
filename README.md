@@ -35,7 +35,7 @@ In this [cookiecutter 🍪](https://github.com/cookiecutter/cookiecutter) templa
 
 ### Development features
 
-- Supports `Python 3.7` and higher.
+- Supports `Python 3.8` and higher.
 - [`Poetry`](https://python-poetry.org/) as a dependencies manager. See configuration in [`pyproject.toml`](https://github.com/andeya/py-layout/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/pyproject.toml) and [`setup.cfg`](https://github.com/andeya/py-layout/blob/main/%7B%7B%20cookiecutter.project_name%20%7D%7D/setup.cfg).
 - Faster formatter tool, automatic codestyle with [`ruff`](https://github.com/astral-sh/ruff) to replace [`black`](https://github.com/psf/black), [`isort`](https://github.com/timothycrosley/isort) and [`pyupgrade`](https://github.com/asottile/pyupgrade).
 - Ready-to-use [`pre-commit`](https://pre-commit.com/) hooks with code-formatting.

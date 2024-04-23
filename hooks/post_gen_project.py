@@ -33,14 +33,11 @@ def generate_license(directory: Path, licence: str) -> None:
         directory: path to the project directory
         licence: chosen licence
     """
-    move(str(directory / "_licences" /
-         f"{licence}.txt"), str(directory / "LICENSE"))
+    move(str(directory / "_licences" / f"{licence}.txt"), str(directory / "LICENSE"))
     rmtree(str(directory / "_licences"))
 
 
-def remove_unused_files(
-    directory: Path, package_name: str, need_to_remove_cli: bool
-) -> None:
+def remove_unused_files(directory: Path, package_name: str, need_to_remove_cli: bool) -> None:
     """Remove unused files.
 
     Args:
@@ -98,12 +95,11 @@ def print_further_instructions(project_name: str, github: str) -> None:
 
 
 def main() -> None:
-    generate_license(directory=PROJECT_DIRECTORY,
-                     licence=licences_dict[LICENSE])
+    generate_license(directory=PROJECT_DIRECTORY, licence=licences_dict[LICENSE])
     remove_unused_files(
         directory=PROJECT_DIRECTORY,
         package_name=PACKAGE_NAME,
-        need_to_remove_cli=PROJECT_MODE != 'bin',
+        need_to_remove_cli=PROJECT_MODE != "bin",
     )
     print_further_instructions(project_name=PROJECT_NAME, github=GITHUB_USER)
 

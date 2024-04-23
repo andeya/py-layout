@@ -13,9 +13,12 @@ endif
 
 .PHONY: lock install pre-commit-install pre-commit-uninstall polish-codestyle formatting format test check-codestyle check-safety lint help
 
-install:
-	poetry lock -n && poetry export --without-hashes > requirements.txt
+lock:
+	poetry lock -n && poetry config warnings.export false && poetry export -f requirements.txt --output requirements.txt
+
+install: lock
 	poetry install -n
+	make formatting
 
 pre-commit-install:
 	poetry run pre-commit install

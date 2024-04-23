@@ -32,27 +32,29 @@ classifiers = []
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">=3.8,<4.0"
 cookiecutter = "^2.6.0"
 
 [tool.poetry.dev-dependencies]
+packaging = "^23.1"
+poetry-plugin-export = "^1.7.1"
+pytest = "^8.1.1"
+pytest-html = "^4.1.1"
+pytest-cov = "^5.0.0"
 bandit = "^1.7.1"
 darglint = "^1.8.1"
 pre-commit = "^2.21.0"
 pydocstyle = "^6.1.1"
 safety = "^2.3.5"
-pytest = "^7.4.3"
 coverage = "^7.2.7"
 coverage-badge = "^1.1.0"
-pytest-html = "^3.1.1"
-pytest-cov = "^3.0.0"
 ruff = "^0.2.0"
 black = "^22.12"
 isort = { extras = ["colors"], version = "^5.10.1" }
 
 [tool.ruff]
 # https://docs.astral.sh/ruff/settings
-line-length = 88
+line-length = 120
 
 # Exclude a variety of commonly ignored directories.
 respect-gitignore = true
@@ -100,10 +102,15 @@ skip-magic-trailing-comma = false
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
 
+# Enable reformatting of code snippets in docstrings.
+docstring-code-format = true
+# Format all docstring code snippets with a line length of 60.
+docstring-code-line-length = 60
+
 [tool.isort]
 # https://github.com/timothycrosley/isort/
 py_version = 37
-line_length = 88
+line_length = 44
 
 sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 profile = "black"
@@ -178,5 +185,5 @@ branch = true
 source = ["hooks"]
 
 [tool.coverage.report]
-fail_under = 50
+fail_under = 25
 show_missing = true

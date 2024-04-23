@@ -40,10 +40,10 @@ def validate_project_name(project_name: str) -> None:
     Followed by any lowercase letters, numbers or underscores.
 
     Args:
-        package_name: current project name
+        project_name: current project name
 
     Raises:
-        ValueError: If package_name is not a valid project name
+        ValueError: If project_name is not a valid project name
     """
     if PROJECT_REGEX.fullmatch(project_name) is None:
         message = f"ERROR: `{project_name}` is not a valid project name."
@@ -77,10 +77,7 @@ def validate_semver(version: str) -> None:
         ValueError: If version is not in semver notation
     """
     if SEMVER_REGEX.fullmatch(version) is None:
-        message = (
-            f"ERROR: The `{
-                version}` is not in semver notation (https://semver.org/)"
-        )
+        message = f"ERROR: The `{version}` is not in semver notation (https://semver.org/)"
         raise ValueError(message)
 
 

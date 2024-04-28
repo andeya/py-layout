@@ -91,8 +91,7 @@ def validate_line_length(line_length: int) -> None:
         ValueError: If line_length isn't between 50 and 300
     """
     if not (50 <= line_length <= 300):
-        message = f"ERROR: line_length must be between 50 and 300. Got `{
-            line_length}`."
+        message = f"ERROR: line_length must be between 50 and 300. Got `{line_length}`."
         raise ValueError(message)
 
 

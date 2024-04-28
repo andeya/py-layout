@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "py-layout"
-version = "1.0.4"
+version = "1.0.5"
 description = "Cookiecutter template for Python project"
 readme = "README.md"
 authors = ["Andeya <andeyalee@outlook.com>"]
